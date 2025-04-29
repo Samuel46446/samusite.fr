@@ -34,7 +34,7 @@
     }</style>
 </head>
 <body>
-    <h1 aria-label="Chapitres">Chapitres</h1>
+    <h1>Chapitres</h1>
     <a href="#1" aria-label="Chapitre : Art de l'Arbre dans une plaine">Art de l'Arbre dans une plaine</a><br>
     <a href="#2" aria-label="Chapitre : Réflexion sur la nature">Réflexion sur la nature</a><br>
     <a href="#3" aria-label="Chapitre : Les éléments de la nature">Les éléments de la nature</a><br>
@@ -78,7 +78,7 @@
     </section>
 
     <footer id="5" aria-label="Les arbres de la nature">
-        <h1>Les arbres de la nature sont également très important :</h1>
+        <h2>Les arbres de la nature sont également très important :</h2>
         <ul>
             <li><p aria-label="Les chênes">Les chênes (plus d'info en cliquant sur l'image)</p>
             <a href="https://fr.wikipedia.org/wiki/Ch%C3%AAne"><img src="oak.jpg" width="300" height="200" alt="Lien vers le chêne (Wikipedia)"></a></li>
@@ -96,16 +96,18 @@
 
     <h1>Vous pouvez vous inscrire à la newsletter des arbres et reçevoir des conseils de vie</h1>
     <form id="myForm">
-        <label>
-            <input type="text" name="nom" placeholder="Votre nom" required><br>
-            <input type="text" name="prénom" placeholder="Votre prénom" required><br>
-        </label>
-        <label>
-            <input type="email" name="email" placeholder="Votre email" required><br>
-        </label>
-        <label>
-            <input type="tel" name="tel" placeholder="Votre telephone" required><br>
-        </label>
+        <label for="nom">Nom :</label>
+        <input type="text" name="nom" id="nom" placeholder="Votre nom" required><br>
+
+        <label for="prenom">Prénom :</label>
+        <input type="text" name="prénom" id="prenom" placeholder="Votre prénom" required><br>
+
+        <label for="email">Email :</label>
+        <input type="email" name="email" id="email" placeholder="Votre email" required><br>
+
+        <label for="tel">Téléphone :</label>
+        <input type="tel" name="tel" id="tel" placeholder="Votre téléphone" required><br>
+
         <input type="submit" id="subscribe-btn" value="S'inscrire à la newsletter">
     </form>
     <p id="message" style="display:none; color: green;">Merci, vous recevrez les newsletters très bientôt !</p>
