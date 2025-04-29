@@ -11,3 +11,20 @@ jobs:
     steps:
       - name: Print Hello
         run: echo "Hello world!"
+  test-accessibility:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Checkout code
+          uses: actions/checkout@v4
+  node-access:
+      runs-on: ubuntu-latest
+      steps:
+        - name: Install Node.js
+          uses: actions/setup-node@v4
+          with:
+            node-version: '20'
+  axe-access:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Install axe-core-cli
+        run: npm install -g @axe-core/cli
