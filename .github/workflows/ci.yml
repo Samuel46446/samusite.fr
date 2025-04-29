@@ -24,7 +24,7 @@ jobs:
         run: npm install -g @axe-core/cli
 
       - name: Run axe accessibility tests
-        run: axe ./ --exit
+        run: axe samuel46446.github.io/samusite.fr/ --exit
   deploy:
     needs: test
     runs-on: ubuntu-latest
