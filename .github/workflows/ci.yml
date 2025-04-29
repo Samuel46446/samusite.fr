@@ -9,7 +9,7 @@ on:
       - main
 
 jobs:
-  test-and-deploy:
+  test:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
@@ -25,7 +25,10 @@ jobs:
 
       - name: Run axe accessibility tests
         run: axe ./ --exit
-
+  deploy:
+    needs: test
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
